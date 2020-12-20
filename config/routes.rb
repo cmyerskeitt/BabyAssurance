@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :brands
+  get '/signup' => 'users#new'
+
+
   resources :reviews
   resources :users
   resources :baby_products
