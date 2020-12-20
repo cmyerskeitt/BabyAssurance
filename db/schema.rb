@@ -17,8 +17,10 @@ ActiveRecord::Schema.define(version: 2020_12_20_011644) do
     t.integer "price"
     t.string "type"
     t.integer "user_id", null: false
+    t.integer "brand_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["brand_id"], name: "index_baby_products_on_brand_id"
     t.index ["user_id"], name: "index_baby_products_on_user_id"
   end
 
@@ -47,6 +49,7 @@ ActiveRecord::Schema.define(version: 2020_12_20_011644) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "baby_products", "brands"
   add_foreign_key "baby_products", "users"
   add_foreign_key "reviews", "baby_products"
   add_foreign_key "reviews", "users"
