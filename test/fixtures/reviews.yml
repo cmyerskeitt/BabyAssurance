@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rating: 1
+  description: MyText
+  user: one
+  baby_product: one
+
+two:
+  rating: 1
+  description: MyText
+  user: two
+  baby_product: two
