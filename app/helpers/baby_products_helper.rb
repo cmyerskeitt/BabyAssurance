@@ -1,0 +1,2 @@
+module BabyProductsHelper
+end
