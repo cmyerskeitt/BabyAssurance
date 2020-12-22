@@ -4,6 +4,7 @@ class CreateBabyProducts < ActiveRecord::Migration[6.0]
       t.string :name
       t.integer :price
       t.string :type
+      t.string :url
       t.belongs_to :user, null: false, foreign_key: true
       t.belongs_to :brand, null: false, foreign_key: true
 

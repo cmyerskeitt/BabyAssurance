@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2020_12_20_011644) do
     t.string "name"
     t.integer "price"
     t.string "type"
+    t.string "url"
     t.integer "user_id", null: false
     t.integer "brand_id", null: false
     t.datetime "created_at", precision: 6, null: false
