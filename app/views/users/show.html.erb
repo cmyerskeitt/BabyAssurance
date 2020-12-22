@@ -1,3 +1,5 @@
 <h1> Welcome <%=@user.username%></h1>
 
-<%# <%=link_to %> %>
+<%= form_tag (url: '/logout', method: 'delete') do %>
+    <%= submit_tag "logout" %>
+<% end %>
