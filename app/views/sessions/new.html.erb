@@ -1,7 +1,7 @@
 <h1> Log In </h1>
 
 
-<% flash[:message] if flash[:message] %>
+<%= flash[:message] if flash[:message] %>
 
 <%=form_tag ("login") do %>
     Username: <%=text_field_tag "username" %><br>
