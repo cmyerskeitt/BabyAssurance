@@ -9,7 +9,12 @@ class ReviewsController < ApplicationController
     end
     
     def new
-        @review = Review.new
+        if params[:baby_product_id] && @bp = BabyProduct.find_by(id: params[:id])
+            @review = @bp.reviews.build
+        else 
+            @error = "That baby product doesn't exist" if params[:baby_product_id]
+            @review = Review.new 
+        end 
     end 
 
     def create 
@@ -23,15 +28,17 @@ class ReviewsController < ApplicationController
     end 
 
     def show 
-        @review = Review.find_by(id: params[:id])
     end 
 
     def edit 
-        @review = Review.find_by(id: params[:id])
     end 
 
     def update
-        @review = Review.find_by(id: params[:id])
+        if @review.update(review_params)
+            redirect_to review_path(@review)
+        else 
+            render :edit 
+        end 
     end 
 
     private 
