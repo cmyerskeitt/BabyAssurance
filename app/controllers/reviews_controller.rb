@@ -1,4 +1,6 @@
 class ReviewsController < ApplicationController
+    before_action :redirect_if_not_logged_in
+    
     def index
         if params[:baby_product_id] && @bp = BabyProduct.find_by(id: params[:id])
             @reviews = @bp.reviews

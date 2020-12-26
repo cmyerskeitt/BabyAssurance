@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
             redirect_to user_path(user)
         else
             # binding.pry
-            # flash[:message] = "Incorrect Credentials, please try again!"
+            flash[:message] = "Incorrect Credentials, please try again!"
             redirect_to "/login"
         end
     end 
