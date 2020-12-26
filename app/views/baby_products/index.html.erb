@@ -1,13 +1,9 @@
 <h1> All Baby Products </h1>
 <div>
     <ul>
-        <% @bps.each do |baby_product| %>
-            <li><%=baby_product.name%><br>
-            <%=baby_product.price%><br>
-            <%=baby_product.product_type%><br>
-            <%=baby_product.url%></li>
-            <br>
-            <br>
-        <% end %>
-    </ul>
+        <% @bps.each do |baby_product|%>
+        <li><%= link_to baby_product.name, baby_product_path(baby_product) %> - <%= baby_product.name%> </li>
+        <% end %>   
+    </ul>  
 </div>
+
