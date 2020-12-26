@@ -1,12 +1,13 @@
 <h1>Baby Product: <%=@bp.name%></h1>
-<h2>Price: <%=@bp.price%></h2>
+<h2>Price: $<%=@bp.price%></h2>
 <h2>Product Type: <%=@bp.product_type%></h2>
 <h2>Image: <br>
     <%= link_to image_tag @bp.url%> </h2>
 
+
 <p><%= link_to "Edit Baby Product", edit_baby_product_path(@bp)%></p>
 
-<p><%= link_to 'Add New Review', new_baby_product_review_path(@bp)%></p>
+<p><%= link_to 'Add a New Review', new_baby_product_review_path(@bp)%></p>
 
 <% if !@bp.reviews.empty? %>
     <p><%= link_to 'See All Reviews', baby_product_reviews_path(@bp)%></p>

@@ -30,12 +30,12 @@ class BabyProductsController < ApplicationController
     end 
 
     def edit 
-        @bp = BabyProduct.find_by(id: params[:id])
+        @bp = BabyProduct.find_by_id(params[:id])
         redirect_to baby_products_path if !@bp || @bp.user != current_user
     end 
 
     def update 
-        @bp = BabyProduct.find_by(id: params[:id])
+        @bp = BabyProduct.find_by_id(params[:id])
         redirect_to baby_products_path if !@bp || @bp.user != current_user
         if @bp.update(baby_product_params)
             redirect_to baby_product_path(@bp)
