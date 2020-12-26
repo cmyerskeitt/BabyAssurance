@@ -10,7 +10,7 @@ class BabyProductsController < ApplicationController
     end 
 
     def create
-        # binding.pry 
+        binding.pry 
         @bp = current_user.baby_products.build(baby_product_params)
         if @bp.save
             redirect_to baby_products_path
@@ -27,7 +27,7 @@ class BabyProductsController < ApplicationController
     private 
 
     def baby_product_params 
-        params.require(:baby_product).permit(:name, :price, :product_type, :brand_id, :url)
+        params.require(:baby_product).permit(:name, :price, :product_type, :url)
     end 
 
 

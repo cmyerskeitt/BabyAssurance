@@ -12,7 +12,7 @@
   <body>
     <div>
       <% if logged_in? %>
-        <%= link_to "Add a Baby Product", new_baby_product_path %> |
+        <%= link_to "Add Baby Product", new_user_baby_product_path %> |
         <%= link_to "All Baby Products", baby_products_path %> |
          <%= link_to "Logout", logout_path, method: "delete" %> 
       <% else%>
