@@ -6,14 +6,15 @@
 
 <p><%= link_to "Edit Baby Product", edit_baby_product_path(@bp)%></p>
 
-<p><%= link_to ' Add a new Review', new_baby_product_review_path(@bp)%></p>
+<p><%= link_to 'Add New Review', new_baby_product_review_path(@bp)%></p>
 
 <% if !@bp.reviews.empty? %>
-    <p><=% link_to 'See all Reviews', new_baby_product_review_path(@baby_product)%></p>
+    <p><%= link_to 'See All Reviews', baby_product_reviews_path(@bp)%></p>
+
     <h4>Most Recent Reviews:</h4>
     <%= @bp.reviews.order(updated_at: :desc).limit(3).each do |r|%>
         <li>
-            <strong><%= r.user.username%></strong> says "<%= link_to r.description, new_baby_product_review_path(@bp,r)%>" at <%= r.updated_at.strftime("%I:%M %p on %m/%d/%Y")%>
+            <strong><%= r.user.username%></strong> says "<%= link_to r.description, baby_product_reviews_path(@bp,r)%>" at <%= r.updated_at.strftime("%I:%M %p on %m/%d/%Y") %>
         </li>
     <% end %>
 <% end %>

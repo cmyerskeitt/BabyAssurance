@@ -52,7 +52,7 @@ class BabyProductsController < ApplicationController
     private 
 
     def baby_product_params 
-        params.require(:baby_product).permit(:name, :price, :product_type, :url)
+        params.require(:baby_product).permit(:name, :price, :product_type, :url, :baby_product_id)
     end 
 
 
