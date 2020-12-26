@@ -2,7 +2,7 @@ class BabyProductsController < ApplicationController
     before_action :redirect_if_not_logged_in
 
     def index
-        @bp = BabyProduct.all
+        @bps = BabyProduct.all
     end 
 
     def new 

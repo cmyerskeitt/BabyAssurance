@@ -3,6 +3,7 @@ class ReviewsController < ApplicationController
         if params[:baby_product_id] && @bp = BabyProduct.find_by(id: params[:id])
             @reviews = @bp.reviews
         else
+            @error = "That baby product does not exist." if params[:post_id]
             @reviews = Review.all
         end 
     end
