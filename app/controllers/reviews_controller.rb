@@ -1,5 +1,7 @@
 class ReviewsController < ApplicationController
     before_action :redirect_if_not_logged_in
+    before_action :set_review, only: [:show, :edit, :update]
+    before_action :redirect_if_not_review_user, only: [:edit, :update]
 
     def index
         # binding.pry
@@ -32,6 +34,7 @@ class ReviewsController < ApplicationController
     end 
 
     def show 
+
     end 
 
     def edit 
@@ -50,6 +53,18 @@ class ReviewsController < ApplicationController
 
     def review_params
         params.require(:review).permit(:rating, :description, :baby_product_id) 
+    end 
+
+    def set_review
+        @review = Review.find_by(id: params[:id])
+        if !@review
+            flash[:message] = "Review was not found"
+            redirect_to reviews_path
+        end 
+    end 
+
+    def redirect_if_not_review_user
+        redirect_to reviews_path if @review.user != current_user
     end 
 
 
