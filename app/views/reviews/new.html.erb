@@ -1,5 +1,10 @@
+<% if @review.baby_product %>
+    <h1> New Review for <%= @review.baby_product.name %></h1>
+<% else %>
+    <h1>All Reviews</h1>
+<% end %>
+
 <%=form_for([@review.baby_product, @review]) do |f| %>
-    <br>
     <%= f.label :rating %>
     <%= f.number_field :rating%><br>
         <br>

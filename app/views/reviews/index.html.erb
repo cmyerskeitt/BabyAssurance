@@ -1,0 +1,11 @@
+<% if @bp %>
+    <h1> Reviews for <%= @bp.name%></h1>
+<% else %>
+    <h1>All Reviews</h1>
+<% end %>
+
+<ul>
+<% @reviews.each do |r|%>
+    <li><%= r.user.username%> gave this product a "<%= r.rating %>" star rating: <%= link_to r.baby_product.name, baby_product_path(r.baby_product_id) %></strong></li>
+<% end %>
+</ul>
