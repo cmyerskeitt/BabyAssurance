@@ -1,8 +1,10 @@
 <h1>Baby Product: <%=@bp.name%></h1>
 <h2>Price: <%=@bp.price%></h2>
-<h2>Type of Product: <%=@bp.product_type%></h2>
-<h2>Image: <%=@bp.url%></h2>
+<h2>Product Type: <%=@bp.product_type%></h2>
+<h2>Image: <br>
+    <%= link_to image_tag @bp.url%> </h2>
 
+<p><%= link_to "Edit Baby Product", edit_baby_product_path(@bp)%></p>
 
 <p><%= link_to ' Add a new Review', new_baby_product_review_path(@bp)%></p>
 
