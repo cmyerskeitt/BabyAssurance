@@ -13,7 +13,7 @@ class ReviewsController < ApplicationController
     end 
 
     def create 
-        binding.pry
+        # binding.pry
         @review = current_user.reviews.build(review_params)
         if @review.save
             redirect_to reviews_path
