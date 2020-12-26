@@ -1,0 +1,8 @@
+<%binding.pry%>
+<h2><%= @review.rating%> - <%= @review.description%> by <%= @review.user.username %></h2>
+
+<% if @review.user == current_user %>
+    <%link_to "Edit Review", edit_review_path(@review)%>
+<% end %>
+
+<h4>See the baby product here: <%= link_to @review.baby_product.name, baby_product_path(@review.baby_product_id)%></h4>
