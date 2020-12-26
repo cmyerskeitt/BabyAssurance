@@ -9,6 +9,7 @@ class ReviewsController < ApplicationController
     end
     
     def new
+        binding.pry 
         if params[:baby_product_id] && @bp = BabyProduct.find_by(id: params[:id])
             @review = @bp.reviews.build
         else 
@@ -46,5 +47,6 @@ class ReviewsController < ApplicationController
     def review_params
         params.require(:review).permit(:rating, :description, :baby_product_id) 
     end 
+ 
 
 end

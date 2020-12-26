@@ -10,7 +10,7 @@ class BabyProductsController < ApplicationController
     end 
 
     def create
-        binding.pry 
+        # binding.pry 
         @bp = current_user.baby_products.build(baby_product_params)
         if @bp.save
             redirect_to baby_products_path
