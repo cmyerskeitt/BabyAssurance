@@ -25,14 +25,6 @@ class UsersController < ApplicationController
         @user = User.find(params[:id])
     end 
  
-    def update 
-        @user.update(user_params)
-        if @user.valid?
-            redirect_to @user
-        else
-            render :edit
-        end 
-    end 
 
     private 
 
