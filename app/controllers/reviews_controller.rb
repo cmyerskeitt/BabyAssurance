@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController
     before_action :redirect_if_not_logged_in
-    
+
     def index
         if params[:baby_product_id] && @bp = BabyProduct.find_by(id: params[:id])
             @reviews = @bp.reviews
@@ -11,7 +11,7 @@ class ReviewsController < ApplicationController
     end
     
     def new
-        binding.pry 
+        # binding.pry 
         if params[:baby_product_id] && @bp = BabyProduct.find_by(id: params[:id])
             @review = @bp.reviews.build
         else 
@@ -21,7 +21,7 @@ class ReviewsController < ApplicationController
     end 
 
     def create 
-        # binding.pry
+        binding.pry
         @review = current_user.reviews.build(review_params)
         if @review.save
             redirect_to reviews_path
