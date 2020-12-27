@@ -4,7 +4,7 @@
 <h2>Image: <br>
     <%= link_to image_tag @bp.url%> </h2>
 
-<% if @bp.user_id == current_user%>
+<% if @bp.user == current_user%>
     <p><%= link_to "Edit Baby Product", edit_baby_product_path(@bp)%></p>
 <% end %>
 
