@@ -14,7 +14,7 @@
     <p><%= link_to 'See All Reviews', baby_product_reviews_path(@bp)%></p>
 
     <h4>Most Recent Reviews:</h4>
-    <%= @bp.reviews.order(updated_at: :desc).limit(3).each do |r|%>
+    <% @bp.reviews.order(updated_at: :desc).limit(3).each do |r|%>
         <li>
             <strong><%= r.user.username%></strong> says "<%= link_to r.description, baby_product_review_path(@bp,r)%>" at <%= r.updated_at.strftime("%I:%M %p on %m/%d/%Y")%>
         </li>
