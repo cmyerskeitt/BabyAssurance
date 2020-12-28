@@ -1,4 +1,4 @@
-<h2><%= @review.rating%> Star Rating - <%= @review.description%> by <%= @review.user.username %></h2>
+<h2><%= @review.rating%> Star Rating - <%= @review.user.username %> says "<%= @review.description%>"</h2>
 
 <% if @review.user == current_user %>
     <%= link_to "Edit Review", edit_review_path(@review)%>
