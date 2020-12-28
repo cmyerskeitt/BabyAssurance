@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   delete '/logout' => 'sessions#destroy'
 
+  
   resources :reviews
   resources :users do 
     resources :baby_products, only: [:new, :create, :index]
