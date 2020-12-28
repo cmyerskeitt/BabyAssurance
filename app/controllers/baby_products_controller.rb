@@ -3,10 +3,10 @@ class BabyProductsController < ApplicationController
 
     def index
         if params[:user_id] && @user = User.find_by_id(params[:user_id])
-            @bps = @user.baby_products
+            @bps = @user.baby_products.alpha
         else
             @error = "That user doesn't exist" if params[:user_id]
-            @bps = BabyProduct.all
+            @bps = BabyProduct.alpha
         end 
     end 
 
