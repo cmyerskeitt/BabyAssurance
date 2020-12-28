@@ -9,7 +9,9 @@ Rails.application.routes.draw do
 
   delete '/logout' => 'sessions#destroy'
 
-  
+  get '/auth/:provider/callback' => 'sessions#google'
+
+
   resources :reviews
   resources :users do 
     resources :baby_products, only: [:new, :create, :index]
@@ -18,5 +20,7 @@ Rails.application.routes.draw do
   resources :baby_products do 
     resources :reviews
   end 
+
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
