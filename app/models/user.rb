@@ -6,5 +6,5 @@ class User < ApplicationRecord
 
     has_secure_password 
     # has_many :brands, through: :baby_products
-    validates :username, :email, presence: true 
+    validates :username, :email, presence: true, uniqueness: true 
 end
