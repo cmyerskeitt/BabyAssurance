@@ -22,6 +22,7 @@ class BabyProductsController < ApplicationController
         # binding.pry 
         
         @bp = current_user.baby_products.build(baby_product_params)
+        binding.pry
         if @bp.save
             redirect_to baby_products_path
         else
