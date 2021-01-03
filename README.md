@@ -12,6 +12,9 @@ As a full time teacher, mom, wife and part-time software engineer student I have
     <br>
     1. git clone git@github.com:cmyerskeitt/BabyAssurance.git
     2. cd BabyAssurance
+    3. Bundle Install
+    4. Rails S 
+    5. Create an Account
 
 
 <strong> What you can do? </strong>
