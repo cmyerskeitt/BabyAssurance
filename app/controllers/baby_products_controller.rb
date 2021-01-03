@@ -50,6 +50,12 @@ class BabyProductsController < ApplicationController
         redirect_to baby_products_path if !@bp
     end 
 
+    def destroy 
+        @bp = BabyProduct.find_by_id(params[:id])
+        @bp.destroy
+        redirect to baby_product_path
+    end 
+
     private 
 
     def baby_product_params 
