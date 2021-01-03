@@ -11,18 +11,27 @@ As a full time teacher, mom, wife and part-time software engineer student I have
 <strong> Installation </strong>
     <br>
     1. git clone git@github.com:cmyerskeitt/BabyAssurance.git
+     <br>
     2. cd BabyAssurance
+     <br>
     3. Bundle Install
+     <br>
     4. Rails S 
+     <br>
     5. Create an Account
 
 
 <strong> What you can do? </strong>
      <br>
     1. Create an Account
+     <br>
     2. Log into your account
+     <br>
     3. Add New Baby Products
+     <br>
     4. Browse All Baby Products 
+     <br>
     5. Review a Baby Product 
+     <br>
     6. Browse All Baby Product Reviews 
 
