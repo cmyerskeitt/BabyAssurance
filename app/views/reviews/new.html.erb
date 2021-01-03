@@ -4,6 +4,8 @@
     <h1>All Reviews</h1>
 <% end %>
 
+<%= render partial: "layouts/errors", locals: {object: @review} %>
+
 <%=form_for([@review.baby_product, @review]) do |f| %>
         
         <%= f.hidden_field :baby_product_id %>

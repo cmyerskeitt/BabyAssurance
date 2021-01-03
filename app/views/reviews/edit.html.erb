@@ -1,4 +1,7 @@
 <h1> Edit Review!</h1>
+
+<%= render partial: "layouts/errors", locals: {object: @reviews} %>
+
 <%= form_for(@review) do |f|%>
 
     <%= f.label :rating %>
