@@ -14,4 +14,24 @@
  *= require_self
  */
 
- 
+ body {
+    background-color:rgb(201, 76, 76);      
+    background-size: 100%;       
+    color: white;               
+    text-align: left;          
+ }
+ a {
+    text-decoration: none;     
+    font-family: Arial;        
+    font-size: 16px;         
+    font-weight: bold; 
+}
+  
+  /* mouse over link */
+  a:hover {
+    color: yellow;
+  }
+  /* selected link */
+  a:active {
+    color:rgb(57,103,150);
+  }
