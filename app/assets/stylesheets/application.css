@@ -14,10 +14,11 @@
  *= require_self
  */
 
+
  body {
-    background-color:rgb(201, 76, 76);      
+    background-image: url(BabyAssuranceBackgroundImage.jpg);
     background-size: 100%;       
-    color: white;               
+    color: rgb(77,29,29);               
     text-align: left;          
  }
  a {
@@ -26,12 +27,19 @@
     font-size: 16px;         
     font-weight: bold; 
 }
-  
+
+
+  /* visited link */
+  a:visited {
+    color: rgba(255, 255, 0, 0.918);
+  }
+ 
+ /* unvisited link */
+a:link {
+  color: white;
+} 
+
   /* mouse over link */
   a:hover {
-    color: yellow;
-  }
-  /* selected link */
-  a:active {
-    color:rgb(57,103,150);
+    color: white ;
   }
