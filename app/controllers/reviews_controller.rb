@@ -48,6 +48,9 @@ class ReviewsController < ApplicationController
         end 
     end 
 
+    def most_reviewed
+    end 
+
     private 
 
     def review_params
@@ -65,5 +68,6 @@ class ReviewsController < ApplicationController
     def redirect_if_not_review_user
         redirect_to reviews_path if @review.user != current_user
     end 
+
 
 end
