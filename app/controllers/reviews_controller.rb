@@ -48,8 +48,7 @@ class ReviewsController < ApplicationController
         end 
     end 
 
-    def most_reviewed
-    end 
+  
 
     private 
 
