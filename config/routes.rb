@@ -11,8 +11,10 @@ Rails.application.routes.draw do
 
   get '/auth/:provider/callback' => 'sessions#google'
 
-
+  get '/users_reviews' => 'reviews#user_reviews'
+  
   resources :reviews
+
   resources :users do 
     resources :baby_products, only: [:new, :create, :index]
   end 

@@ -48,6 +48,10 @@ class ReviewsController < ApplicationController
         end 
     end 
 
+    def user_reviews
+        @reviews = current_user.reviews
+        render :index
+    end 
   
 
     private 
