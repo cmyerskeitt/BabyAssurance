@@ -19,10 +19,10 @@ class BabyProductsController < ApplicationController
     end 
 
     def create
-        # binding.pry 
+        
         
         @bp = current_user.baby_products.build(baby_product_params)
-        # binding.pry
+        
         if @bp.save
             redirect_to baby_products_path
         else
@@ -53,7 +53,7 @@ class BabyProductsController < ApplicationController
     def destroy 
         @bp = BabyProduct.find_by_id(params[:id])
         @bp.destroy
-        redirect to baby_product_path
+        redirect_to baby_product_path
     end 
 
     private 

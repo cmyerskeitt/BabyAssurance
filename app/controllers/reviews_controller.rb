@@ -4,7 +4,7 @@ class ReviewsController < ApplicationController
     before_action :redirect_if_not_review_user, only: [:edit, :update]
 
     def index
-        # binding.pry
+     
         if params[:baby_product_id] && @bp = BabyProduct.find_by_id(params[:baby_product_id])
             @reviews = @bp.reviews
         else
@@ -14,7 +14,7 @@ class ReviewsController < ApplicationController
     end
     
     def new
-        # binding.pry 
+        
         if params[:baby_product_id] && @bp = BabyProduct.find_by_id(params[:baby_product_id])
             @review = @bp.reviews.build
         else 
@@ -25,7 +25,7 @@ class ReviewsController < ApplicationController
 
     def create 
         @review = current_user.reviews.build(review_params)
-        # binding.pry
+       
         if @review.save
             redirect_to reviews_path(@review)
         else
@@ -40,7 +40,7 @@ class ReviewsController < ApplicationController
     end 
 
     def update
-        # binding.pry
+        
         if @review.update(review_params)
             redirect_to review_path(@review)
         else 
