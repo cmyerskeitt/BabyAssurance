@@ -17,10 +17,12 @@
 
  body {
     background-image: url(BabyAssuranceBackgroundImage.jpg);
+    background-repeat: space;
     background-size: 50%;       
     color: rgb(77,29,29);               
     text-align: left;          
  }
+
  a {
     text-decoration: none;     
     font-family: Arial;        
