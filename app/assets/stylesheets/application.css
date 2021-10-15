@@ -17,10 +17,13 @@
 
  body {
     background-image: url(BabyAssuranceBackgroundImage.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
     background-repeat: space;
-    background-size: 50%;       
+    background-size: 50%;      
     color: rgb(77,29,29);               
-    text-align: left;          
+    text-align: center;          
  }
 
  a {
@@ -44,4 +47,10 @@ a:link {
   /* mouse over link */
   a:hover {
     color: white ;
+  }
+
+  .navbar {
+    background: rgb(77,29,29);
+    width: auto;
+    padding: 50px;
   }
