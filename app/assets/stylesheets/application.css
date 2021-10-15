@@ -15,29 +15,29 @@
  */
 
 
- body {
-    background-image: url(BabyAssuranceBackgroundImage.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center; 
-    background-repeat: space;
-    background-size: 50%;      
-    color: rgb(77,29,29);               
-    text-align: center;          
- }
+body {
+  background-image: url(BabyAssuranceBackgroundImage.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+  background-repeat: space;
+  background-size: 50%;      
+  color: rgb(77,29,29);               
+  text-align: center;        
+}
 
- a {
-    text-decoration: none;     
-    font-family: Arial;        
-    font-size: 16px;         
-    font-weight: bold; 
+a {
+  text-decoration: none;     
+  font-family: Arial;        
+  font-size: 20px;         
+  font-weight: bold; 
 }
 
 
   /* visited link */
-  a:visited {
-    color: rgba(255, 255, 0, 0.918);
-  }
+a:visited {
+  color: rgba(255, 255, 0, 0.918);
+}
  
  /* unvisited link */
 a:link {
@@ -45,12 +45,26 @@ a:link {
 } 
 
   /* mouse over link */
-  a:hover {
-    color: white ;
-  }
+a:hover {
+  color: white ;
+}
 
-  .navbar {
-    background: rgb(77,29,29);
-    width: auto;
-    padding: 50px;
-  }
+.navbar {
+  background: rgb(77,29,29);
+  width: auto;
+  padding: 50px;
+}
+
+h1 {
+  background-color:rgba(255, 255, 0, 0.918);
+  padding: 15px;
+}
+
+.login-form {
+  color: white;
+  background-color: transparent;
+  /* border: 10px solid rgb(77,29,29); */
+  padding: 20px;
+  font-size: 30px;
+
+}
