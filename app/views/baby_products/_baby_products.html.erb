@@ -1,25 +1,27 @@
-<%= form_for(@bp) do |f| %>
+<div class= 'form-styles'>
+    <%= form_for(@bp) do |f| %>
 
-    <%= f.label :name %>
-    <%= f.text_field :name %><br>
-        <br>
-    <%= f.label :price %>
-    <%= f.number_field :price %><br>
-        <br>
+        <%= f.label :name %>
+        <%= f.text_field :name %><br>
+            <br>
+        <%= f.label :price %>
+        <%= f.number_field :price %><br>
+            <br>
 
-    <%= f.label :product_type %>
-    <%= f.text_field :product_type %><br>
-        <br>
+        <%= f.label :product_type %>
+        <%= f.text_field :product_type %><br>
+            <br>
 
-    <%= f.label :url %>
-    <%= f.text_field :url %><br>
-        <br>
+        <%= f.label :url %>
+        <%= f.text_field :url %><br>
+            <br>
 
-    
+        
 
 
+  
+        <%= f.submit :class => "button" %>
+   
 
-    <%= f.submit %>
-    
-
-<% end %>
+    <% end %>
+</div>

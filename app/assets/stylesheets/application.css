@@ -23,7 +23,8 @@ body {
   background-repeat: space;
   background-size: 50%;      
   color: rgb(77,29,29);               
-  text-align: center;        
+  text-align: center;    
+  font-size: 20px;    
 }
 
 a {
@@ -68,3 +69,5 @@ h1 {
   font-size: 30px;
 
 }
+
+require_self
