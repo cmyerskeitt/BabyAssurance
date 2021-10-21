@@ -30,7 +30,7 @@ body {
 a {
   text-decoration: none;     
   font-family: Arial;        
-  font-size: 20px;         
+  font-size: 25px;         
   font-weight: bold; 
 }
 
@@ -63,11 +63,13 @@ h1 {
 
 .login-form {
   color: white;
-  background-color: transparent;
+  /* background-color: transparent; */
   /* border: 10px solid rgb(77,29,29); */
   padding: 20px;
   font-size: 30px;
 
 }
 
-require_self
+/* div {
+  font-size: large;
+} */
