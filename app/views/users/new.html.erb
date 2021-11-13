@@ -2,6 +2,7 @@
 
 <%= render partial: "layouts/errors", locals: {object: @user} %>
 
+<div class="login-form">
 <%= form_for(@user, url:'/signup') do |f|%>
     <%= f.label :username %>
     <%= f.text_field :username %>
@@ -18,3 +19,4 @@
     <%= f.submit "Submit", :class => "button" %>
     
 <% end %>
+</div>
